@@ -1,10 +1,11 @@
 package com.example.util;
 
-import com.example.model.Expense;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.example.model.Expense;
 
 public class ExpenseValidator {
     
@@ -24,8 +25,14 @@ public class ExpenseValidator {
         "Other"
     };
     
-    // Validate expense data
-    public static List<String> validateExpense(Expense expense) {
+    // Validate expense data and return boolean
+    public boolean validateExpense(Expense expense) {
+        List<String> errors = validateExpenseErrors(expense);
+        return errors.isEmpty();
+    }
+    
+    // Validate expense data and return list of errors
+    public static List<String> validateExpenseErrors(Expense expense) {
         List<String> errors = new ArrayList<>();
         
         // Validate amount

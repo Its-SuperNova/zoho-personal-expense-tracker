@@ -1,7 +1,10 @@
 com\example\LoginServlet.class
+com\example\servlet\EditExpenseServlet.class
 com\example\util\ExpenseValidator.class
+com\example\servlet\DeleteExpenseServlet.class
 com\example\DBConnection.class
 com\example\RegisterServlet.class
-com\example\servlet\addExpenseServlet.class
 com\example\model\Expense.class
 com\example\dao\ExpenseDAO.class
+com\example\servlet\ViewExpensesServlet.class
+com\example\servlet\AddExpenseServlet.class

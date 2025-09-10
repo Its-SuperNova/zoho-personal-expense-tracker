@@ -1,0 +1,149 @@
+/* Register Page Specific Styles - Minimalistic */
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fafafa;
+}
+
+.register-container {
+    background: #ffffff;
+    padding: 40px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.register-header h1 {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.register-header p {
+    color: #666666;
+    font-size: 14px;
+}
+
+.password-strength {
+    margin-top: 6px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.password-strength.weak {
+    color: #dc2626;
+}
+
+.password-strength.medium {
+    color: #d97706;
+}
+
+.password-strength.strong {
+    color: #16a34a;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 8px;
+    font-family: inherit;
+}
+
+.register-btn:hover {
+    background: #333333;
+    border-color: #333333;
+}
+
+.register-btn:active {
+    transform: translateY(1px);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.login-link p {
+    color: #666666;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.login-link a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.login-link a:hover {
+    color: #333333;
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.terms-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.terms-checkbox input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.1);
+}
+
+.terms-checkbox a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.terms-checkbox a:hover {
+    color: #333333;
+}
+
+@media (max-width: 480px) {
+    .register-container {
+        padding: 32px 24px;
+        margin: 0;
+    }
+    
+    .register-header h1 {
+        font-size: 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

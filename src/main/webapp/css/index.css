@@ -1,0 +1,138 @@
+/* Index Page Specific Styles - Minimalistic */
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fafafa;
+}
+
+.welcome-container {
+    background: #ffffff;
+    padding: 48px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 480px;
+    width: 100%;
+}
+
+.welcome-header h1 {
+    color: #000000;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    letter-spacing: -0.025em;
+}
+
+.welcome-header p {
+    color: #666666;
+    font-size: 16px;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.feature-list {
+    text-align: left;
+    margin: 32px 0;
+    padding: 24px;
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+}
+
+.feature-list h3 {
+    color: #000000;
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.feature-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    padding: 8px 0;
+    color: #333333;
+    position: relative;
+    padding-left: 24px;
+    font-size: 14px;
+}
+
+.feature-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #000000;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.btn {
+    min-width: 120px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 32px 0;
+    padding: 24px;
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #666666;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+@media (max-width: 480px) {
+    .welcome-container {
+        padding: 32px 24px;
+    }
+    
+    .welcome-header h1 {
+        font-size: 28px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 16px;
+    }
+}

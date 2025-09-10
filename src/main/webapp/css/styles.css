@@ -15,7 +15,6 @@ body {
     background: #ffffff;
     color: #000000;
     min-height: 100vh;
-    padding: 20px;
     line-height: 1.5;
 }
 
@@ -39,8 +38,10 @@ body {
     text-decoration: none;
     cursor: pointer;
     transition: all 0.2s ease;
-    display: inline-block;
-    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     font-family: inherit;
 }
 

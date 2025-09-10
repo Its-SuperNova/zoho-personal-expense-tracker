@@ -59,7 +59,7 @@
               Track your daily expenses, categorize them, and get insights into
               your spending patterns.
             </p>
-            <a href="#" class="action-btn">Add Expense</a>
+            <a href="expenses.jsp" class="action-btn">Add Expense</a>
           </div>
 
           <div class="feature-card">

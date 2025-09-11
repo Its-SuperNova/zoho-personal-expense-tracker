@@ -529,7 +529,7 @@
           <div class="nav-section-title">Main Menu</div>
           <ul class="nav-menu">
             <li class="nav-item">
-              <a href="dashboard.jsp" class="nav-link active">
+              <a href="dashboard" class="nav-link active">
                 <svg class="nav-icon" viewBox="0 0 24 24">
                   <path
                     d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"
@@ -549,7 +549,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="stocks.jsp" class="nav-link">
+              <a href="stocks" class="nav-link">
                 <svg class="nav-icon" viewBox="0 0 24 24">
                   <path
                     d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"
@@ -559,7 +559,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="portfolio.jsp" class="nav-link">
+              <a href="portfolio" class="nav-link">
                 <svg class="nav-icon" viewBox="0 0 24 24">
                   <path
                     d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
@@ -569,7 +569,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="analytics.jsp" class="nav-link">
+              <a href="analytics" class="nav-link">
                 <svg class="nav-icon" viewBox="0 0 24 24">
                   <path
                     d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"
@@ -579,7 +579,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="predictions.jsp" class="nav-link">
+              <a href="predictions" class="nav-link">
                 <svg class="nav-icon" viewBox="0 0 24 24">
                   <path d="M9 11H7v9h2v-9zm4-4h-2v13h2V7zm4-4h-2v17h2V3z" />
                 </svg>
@@ -603,7 +603,7 @@
       <main class="main-content">
         <header class="top-navbar">
           <div class="navbar-title">
-            <h1>Expenses</h1>
+            <h1>Dashboard</h1>
           </div>
           <div class="navbar-actions">
             <div class="user-avatar">JD</div>
@@ -623,7 +623,10 @@
                   />
                 </svg>
               </div>
-              <div class="stat-value">2,450</div>
+              <div class="stat-value">
+                <%= request.getAttribute("expenseCount") != null ?
+                request.getAttribute("expenseCount") : "0" %>
+              </div>
               <div class="stat-change">
                 vs last month
                 <span class="stat-trend"
@@ -645,7 +648,10 @@
                   />
                 </svg>
               </div>
-              <div class="stat-value">$18,490</div>
+              <div class="stat-value">
+                $<%= request.getAttribute("totalExpenses") != null ?
+                request.getAttribute("totalExpenses") : "0.00" %>
+              </div>
               <div class="stat-change">
                 vs last month
                 <span class="stat-trend"
@@ -667,7 +673,10 @@
                   />
                 </svg>
               </div>
-              <div class="stat-value">2,355</div>
+              <div class="stat-value">
+                $<%= request.getAttribute("monthlyExpenses") != null ?
+                request.getAttribute("monthlyExpenses") : "0.00" %>
+              </div>
               <div class="stat-change">
                 vs last month
                 <span class="stat-trend"
@@ -689,7 +698,10 @@
                   />
                 </svg>
               </div>
-              <div class="stat-value">890</div>
+              <div class="stat-value">
+                <%= request.getAttribute("categoryCount") != null ?
+                request.getAttribute("categoryCount") : "0" %>
+              </div>
               <div class="stat-change">
                 vs last month
                 <span class="stat-trend"

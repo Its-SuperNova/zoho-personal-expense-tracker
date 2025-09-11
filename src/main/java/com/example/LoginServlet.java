@@ -14,12 +14,12 @@ import jakarta.servlet.http.HttpSession;
 public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("username");
+        String email = request.getParameter("email");
         String password = request.getParameter("password");
 
         try (Connection conn = DBConnection.getConnection()) {
-            PreparedStatement ps = conn.prepareStatement("SELECT * FROM users WHERE username=? AND password_hash=?");
-            ps.setString(1, username);
+            PreparedStatement ps = conn.prepareStatement("SELECT * FROM users WHERE email=? AND password_hash=?");
+            ps.setString(1, email);
             ps.setString(2, password);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {

@@ -13,13 +13,13 @@ import jakarta.servlet.http.HttpServletResponse;
 public class RegisterServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("username");
+        String fullName = request.getParameter("fullName");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String confirmPassword = request.getParameter("confirmPassword");
 
         // Basic validation
-        if (username == null || username.trim().isEmpty() ||
+        if (fullName == null || fullName.trim().isEmpty() ||
             email == null || email.trim().isEmpty() ||
             password == null || password.trim().isEmpty()) {
             response.sendRedirect("register.jsp?error=" + java.net.URLEncoder.encode("All fields are required", "UTF-8"));
@@ -34,20 +34,19 @@ public class RegisterServlet extends HttpServlet {
 
         // Check if username or email already exists
         try (Connection conn = DBConnection.getConnection()) {
-            // Check if username exists
-            PreparedStatement checkUser = conn.prepareStatement("SELECT id FROM users WHERE username = ? OR email = ?");
-            checkUser.setString(1, username);
-            checkUser.setString(2, email);
+            // Check if email exists
+            PreparedStatement checkUser = conn.prepareStatement("SELECT id FROM users WHERE email = ?");
+            checkUser.setString(1, email);
             ResultSet rs = checkUser.executeQuery();
             
             if (rs.next()) {
-                response.sendRedirect("register.jsp?error=" + java.net.URLEncoder.encode("Username or email already exists", "UTF-8"));
+                response.sendRedirect("register.jsp?error=" + java.net.URLEncoder.encode("Email already exists", "UTF-8"));
                 return;
             }
 
             // Insert new user
-            PreparedStatement ps = conn.prepareStatement("INSERT INTO users (username, email, password_hash) VALUES (?, ?, ?)");
-            ps.setString(1, username.trim());
+            PreparedStatement ps = conn.prepareStatement("INSERT INTO users (full_name, email, password_hash) VALUES (?, ?, ?)");
+            ps.setString(1, fullName.trim());
             ps.setString(2, email.trim());
             ps.setString(3, password); // In production, hash this password
             ps.executeUpdate();

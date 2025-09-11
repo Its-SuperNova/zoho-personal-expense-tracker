@@ -162,26 +162,36 @@
           <p>Create your account to get started</p>
         </div>
 
-            <div class="form-container">
-                <%
-                    String error = request.getParameter("error");
-                    String success = request.getParameter("success");
-                    if (error != null) {
-                %>
-                <div style="background: #fee2e2; color: #991b1b; padding: 12px; border-radius: 6px; margin-bottom: 1rem; border: 1px solid #fca5a5;">
-                    <%= error %>
-                </div>
-                <%
-                    }
-                    if (success != null) {
-                %>
-                <div style="background: #d1fae5; color: #065f46; padding: 12px; border-radius: 6px; margin-bottom: 1rem; border: 1px solid #a7f3d0;">
-                    <%= success %>
-                </div>
-                <%
-                    }
-                %>
-                <form id="registerForm" action="register" method="post">
+        <div class="form-container">
+          <% String error = request.getParameter("error"); String success =
+          request.getParameter("success"); if (error != null) { %>
+          <div
+            style="
+              background: #fee2e2;
+              color: #991b1b;
+              padding: 12px;
+              border-radius: 6px;
+              margin-bottom: 1rem;
+              border: 1px solid #fca5a5;
+            "
+          >
+            <%= error %>
+          </div>
+          <% } if (success != null) { %>
+          <div
+            style="
+              background: #d1fae5;
+              color: #065f46;
+              padding: 12px;
+              border-radius: 6px;
+              margin-bottom: 1rem;
+              border: 1px solid #a7f3d0;
+            "
+          >
+            <%= success %>
+          </div>
+          <% } %>
+          <form id="registerForm" action="register" method="post">
             <div class="form-group">
               <label for="fullName" class="form-label">Full Name</label>
               <input

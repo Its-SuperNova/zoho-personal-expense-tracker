@@ -1,6 +1,7 @@
 com\example\LoginServlet.class
 com\example\servlet\EditExpenseServlet.class
 com\example\util\ExpenseValidator.class
+com\example\LogoutServlet.class
 com\example\servlet\DeleteExpenseServlet.class
 com\example\DBConnection.class
 com\example\RegisterServlet.class

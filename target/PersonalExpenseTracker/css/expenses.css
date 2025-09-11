@@ -343,51 +343,113 @@ body {
 .category-tag {
     display: inline-flex;
     align-items: center;
-    padding: 4px 10px;
-    border-radius: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
     font-size: 12px;
     font-weight: 500;
     text-transform: capitalize;
+    white-space: nowrap;
 }
 
 .category-tag.food {
+    background: #f0fdf4;
+    color: #166534;
+}
+
+.category-tag.transport {
+    background: #eff6ff;
+    color: #1e40af;
+}
+
+.category-tag.entertainment {
     background: #fef3c7;
     color: #d97706;
 }
 
-.category-tag.transport {
-    background: #dbeafe;
-    color: #2563eb;
-}
-
-.category-tag.entertainment {
-    background: #ede9fe;
-    color: #7c3aed;
-}
-
 .category-tag.shopping {
-    background: #fce7f3;
-    color: #db2777;
+    background: #fdf2f8;
+    color: #be185d;
 }
 
 .category-tag.bills {
-    background: #d1fae5;
-    color: #059669;
+    background: #f0f9ff;
+    color: #0369a1;
 }
 
 .category-tag.healthcare {
-    background: #fee2e2;
+    background: #fef2f2;
     color: #dc2626;
 }
 
 .category-tag.education {
-    background: #cffafe;
-    color: #0891b2;
+    background: #f0fdf4;
+    color: #059669;
 }
 
 .category-tag.other {
-    background: #f1f5f9;
+    background: #f8fafc;
     color: #64748b;
+}
+
+/* Additional category variations */
+.category-tag.fooddining {
+    background: #f0fdf4;
+    color: #166534;
+}
+
+.category-tag.transportation {
+    background: #eff6ff;
+    color: #1e40af;
+}
+
+.category-tag.billsutilities {
+    background: #f0f9ff;
+    color: #0369a1;
+}
+
+.category-tag.shopping {
+    background: #fdf2f8;
+    color: #be185d;
+}
+
+.category-tag.healthcare {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.category-tag.education {
+    background: #f0fdf4;
+    color: #059669;
+}
+
+.category-tag.entertainment {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.category-tag.groceries {
+    background: #f0fdf4;
+    color: #166534;
+}
+
+.category-tag.gas {
+    background: #eff6ff;
+    color: #1e40af;
+}
+
+.category-tag.subscription {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.category-tag.coffee {
+    background: #f0fdf4;
+    color: #166534;
+}
+
+.category-tag.electricity {
+    background: #f0f9ff;
+    color: #0369a1;
 }
 
 /* Pagination */
